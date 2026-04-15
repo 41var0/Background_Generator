@@ -1,3 +1,11 @@
+Background generator
+![Static Badge](https://img.shields.io/badge/passing-No-red?style=flat)
+
+---
+
+
+
+
 This is a little project in order to create some cool wallpapers/images.
 
 Further developement is under consideration, like auto-generated "simple" wallpapers.
