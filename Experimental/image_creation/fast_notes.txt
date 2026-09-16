@@ -3,11 +3,11 @@
 Condiciones iniciales de max_triangle_height 0    (MIN)
 Condiciones iniciales de min_triangle_height 0    (MIN)
 Condiciones iniciales de vertical_steps 2         (PS)
-Condiciones iniciales de relation -2.25           (NR)
+Condiciones iniciales de relation  2.25           (PR)
 ____
 |  /
 |/
-L-> MIN + MIN + PS * NR
+L-> MIN + MIN + PS * PR
 ################################################################################
 ################################################################################
 
