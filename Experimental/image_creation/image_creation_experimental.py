@@ -1,5 +1,7 @@
 from PIL import Image, ImageDraw
 from datetime import datetime
+from verified_methods_exp import triangle_from_vertical_lines
+
 
 from PIL.ImageFont import ImageFont, FreeTypeFont
 
@@ -24,17 +26,17 @@ width, height = 1920, 1080
 # width, height = 7680, 4320
 #  ^^^^ --- Ratios --- ^^^^ #
 
-
+######################### Image & Draw
+### Image and Draw creation
 # img = Image.new('RGBA', (width, height), (88,  33, 222, 40))
 img = Image.new('RGB', (width, height), (0, 0, 0))
-
 draw = ImageDraw.Draw(img)
+#########################
 
 
 ######################### Rectangulo
 # draw.rectangle(xy=((width/2 -33, height/2 -33), (width/2 +33, height/2 +33)))
 #########################
-
 
 ######################### Text
 # draw.text(  # https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
@@ -47,56 +49,50 @@ draw = ImageDraw.Draw(img)
 # )
 #########################
 
-
+######################### Lines
+### Lines that split the image on four equals quarters
 # draw.line(xy=((width/2, 0), (width/2, height)), width=1 , fill="grey")
 # draw.line(xy=((0, height/2), (width, height/2)), width=1 , fill="grey")
+#########################
 
 
 
 
-# Make a balck-withe pattern 1 by 2
-
-custom_height = height
-rel = - (width/ height)
-
-
-for w in range(0, width, 4):
-    for h in range(0, custom_height, 4):
-
-            # print((w, h))
-            img.putpixel((w, h), (50, 255, 255))
-            img.putpixel((w+1, h), (50, 255, 255))
-            img.putpixel((w, h+1), (50, 255, 255))
-            img.putpixel((w+1, h+1),(50, 255, 255))
-
-    custom_height = int(custom_height + (rel))
-    print(f"{custom_height}, ", end="")
-
-
-
-
-
-
-
-
-# custom_height = height
-# for w in range(0, width, 2):
-#     for h in range(0, custom_height, 2):
+### Tests
+# t_i = datetime.now()
 #
-#             print((w, h))
-#             img.putpixel((w, h), (50, 255, 255))
-#     custom_height = int(custom_height - 6*(1/custom_height))
-#     print()
-# img.putdata((500,)*365)
+# triangle_from_vertical_lines(draw=draw, color=(55, 255, 255), reverse=True)
+#
+# t_f = datetime.now()
+#
+# print()
+# print(f"Time take {t_f - t_i}")
+#
+# img.show()
+
+# del img, draw
+# img = Image.new('RGB', (width, height), (0, 0, 0))
+# draw = ImageDraw.Draw(img)
+# triangle_from_vertical_lines(draw=draw, color=(55, 255, 255))
+# img.show(title="normal")
+del img, draw
+img = Image.new('RGB', (width, height), (0, 0, 0))
+draw = ImageDraw.Draw(img)
+triangle_from_vertical_lines(draw=draw, color=(55, 255, 255), reverse=True)
+img.show(title="reversed")
+#
 
 
-# Con "marco"
-# for w in range(20, width -20, 2):
-#     for h in range(20, height -20, 2):
 
-img.save('exp_image.png')
-img.show()
 
+
+
+
+
+######################################
+# img.save('exp_image.png')
+# img.show()
+######################################
 
 print(f"\n\nDone {datetime.now()}")
 
