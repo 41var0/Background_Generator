@@ -1,6 +1,6 @@
 ################################################################################
 ################################################################################
-Condiciones iniciales de max_triangle_height 0    (MIN)
+Condiciones iniciales de max_triangle_height 1080 (MAX)
 Condiciones iniciales de min_triangle_height 0    (MIN)
 Condiciones iniciales de vertical_steps 2         (PS)
 Condiciones iniciales de relation  2.25           (PR)
