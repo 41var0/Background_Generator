@@ -78,7 +78,8 @@ draw = ImageDraw.Draw(img)
 del img, draw
 img = Image.new('RGB', (width, height), (0, 0, 0))
 draw = ImageDraw.Draw(img)
-triangle_from_vertical_lines(draw=draw, color=(55, 255, 255), reverse=True)
+color = (55, 255, 255)
+triangle_from_vertical_lines(draw=draw, color=color)
 img.show(title="reversed")
 #
 
