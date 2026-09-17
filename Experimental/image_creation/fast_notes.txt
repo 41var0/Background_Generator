@@ -1,80 +1,17 @@
-################################################################################
-################################################################################
-Condiciones iniciales de max_triangle_height 1080 (MAX)
-Condiciones iniciales de min_triangle_height 0    (MIN)
-Condiciones iniciales de vertical_steps 2         (PS)
-Condiciones iniciales de relation  2.25           (PR)
-____
-|  /
-|/
-L-> MIN + MIN + PS * PR
-################################################################################
-################################################################################
-
-
-################################################################################
-################################################################################
-Condiciones iniciales de max_triangle_height 1080 (MAX)
-Condiciones iniciales de min_triangle_height 1080 (MAX)
-Condiciones iniciales de vertical_steps -2        (NS)
-Condiciones iniciales de relation 2.25            (PR)
- /|
-/_|
-L-> MAX + MAX + NS + PR
-################################################################################
-################################################################################
-
-################################################################################
-################################################################################
-Condiciones iniciales de max_triangle_height 0    (MIN)
-Condiciones iniciales de min_triangle_height 1080 (MAX)
-Condiciones iniciales de vertical_steps -2        (NS)
-Condiciones iniciales de relation -2.25           (NR)
-|\
-|_\
-L-> MIN + MAX + NS + NR
-################################################################################
-################################################################################
-
-
-################################################################################
-################################################################################
-Condiciones iniciales de max_triangle_height 0    (MIN)
-Condiciones iniciales de min_triangle_height 0    (MIN)
-Condiciones iniciales de vertical_steps 2         (PS)
-Condiciones iniciales de relation -2.25           (NR)
-___
-\ |
- \|
-L-> MIN + MIN + PS + NR
-################################################################################
-################################################################################
-
-################################################################################
-################################################################################
-################################################################################
-################################################################################
-
-
-    if (not reverse):
-        max_triangle_height = original_height
-        vertical_steps = -2
-
-        if (not upsidedown): min_triangle_height = original_height
-        else :
-            pass
-
-    else:
-        max_triangle_height = 0
-        rel *= -1
-        # the relation needs to be negative in order to increase: -*- =
-        vertical_steps = 2
-
-        if (not upsidedown):
-            min_triangle_height = 0
-        else :
-            pass
 
 
 
-    # vertical steps its 2 because of "pixels width"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
