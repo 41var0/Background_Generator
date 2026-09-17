@@ -98,11 +98,19 @@ triangle_from_vertical_lines(draw=draw3, color=color, flip_h=True, flip_v=True)
 # img3.show(title="reversed")
 
 
-
-
-
-
-
+imas = (img, img1, img2, img3)
+# imas = imas[::-1]º
+def image_grid(imgs, rows, cols):
+    """method from https://stackoverflow.com/a/65583584/31001735"""
+    assert len(imgs) == rows * cols
+    w, h = imgs[0].size
+    grid = Image.new('RGB', size=(cols * w, rows * h))
+    grid_w, grid_h = grid.size
+    for i, img in enumerate(imgs):
+        grid.paste(img, box=(i % cols * w, i // cols * h))
+    return grid
+gri = image_grid(imgs=imas, rows=2, cols=2)
+gri.show()
 
 ######################################
 # img.save('exp_image.png')
